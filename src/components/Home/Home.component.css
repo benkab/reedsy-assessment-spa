@@ -1,0 +1,45 @@
+.home{
+  margin: 50px auto;
+}
+
+.home .home-inner-container{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+}
+
+.home .home-inner-container .home-header{
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.home .home-inner-container .home-header h2{
+  color: #DF9721;
+  margin-bottom: 20px;
+}
+
+.home .home-inner-container .home-header input{
+  max-width: 90%;
+  margin: 0 auto;
+  font-style: 13px;
+  box-shadow: none;
+  border: none;
+  padding: 10px 20px;
+}
+
+.home button.btn{
+  margin-top: 20px;
+  height: 35px;
+  font-size: 13px;
+  background: #DF9721;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.home button.btn:hover{
+  background: rgb(236, 178, 83);
+}

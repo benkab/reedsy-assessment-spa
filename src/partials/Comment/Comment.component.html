@@ -1,0 +1,6 @@
+<div class="row comment" v-if="this.comment">
+  <p class="comment-author">John Doe
+    <span class="pull-right">{{moment(this.comment.date).format('MMMM Do YYYY, h:mm:ss a')}}</span>
+  </p>
+  <p class="book-content">{{this.comment.content}}</p>
+</div>

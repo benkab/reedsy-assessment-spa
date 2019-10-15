@@ -1,0 +1,44 @@
+<div v-if="this.book" class="row home book-page">
+  <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+    <div class="row home-inner-container">
+      <div class="home-header row">
+        <div class="row book">
+          <div class="row text-left">
+            <p @click="this.viewBooks" class="back-link text-left">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              View all books</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-left">
+              <h3>{{this.book.title}}</h3>
+              <p class="book-author">{{this.book.author}}</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <ul>
+                <li class="number">Upvoted {{this.book.upvotes}} times</li>
+                <li v-if="this.book.upvoted === false" class="upvote">Upvote</li>
+                <li v-if="this.book.upvoted === true" class="upvoted">Upvoted</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+              <div class="thumbnail">
+                <img :src="this.refractorImageSource(this.book.cover)" alt="this.book.slug" />
+              </div>
+            </div>
+          </div>
+          <div class="row text-left">
+            <h4>Synopsis</h4>
+            <p class="book-content">{{this.book.synopsis}}</p>
+            <h4>Rating: {{this.book.rating}}/10</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row home-inner-container comment-container">
+      <Comment v-for="comment in this.getComments" :comment="comment" :key="comment.id" />
+      <CommentInput />
+    </div>
+  </div>
+</div>

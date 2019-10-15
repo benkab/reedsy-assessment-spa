@@ -1,0 +1,70 @@
+.book-page .home-inner-container{
+  background: white !important;
+}
+
+.book-page .back-link{
+  color: #DF9721;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.book-page .back-link:hover{
+  text-decoration: underline;
+}
+
+.book-page .home-inner-container .home-header{
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.book-page .home-inner-container .home-header h3{
+  color: #DF9721;
+  margin-bottom: 5px;
+
+}
+
+.book-page .home-inner-container ul{
+  margin-top: 25px;
+  text-align: right;
+
+}
+
+.book-page .home-inner-container ul{
+  margin-right: 0px !important;
+  margin-left: 15px;
+}
+
+.book-page .home-inner-container .thumbnail{
+  cursor: auto;
+  margin-bottom: 20px;
+}
+
+.book-page .home-inner-container h4{
+  font-size: 16px;
+}
+
+.book-page .comment-container{
+  margin-top: 20px;
+}
+
+.book-page .comment-container .comment-input-container{
+  padding: 30px;
+}
+
+.book-page .comment-container .comment-input-container textarea{
+  border-radius: 0;
+  box-shadow: none;
+  height: 80px;
+  resize: none;
+  border: 1px solid #FFF3DF;
+  font-size: 13px;
+  padding: 15px;
+  margin-bottom: 0px;
+}
+
+.book-page button{
+  margin-bottom: -15px !important;
+}

@@ -1,0 +1,21 @@
+<div v-if="this.book" class="row book " :class="{'book-white-bg' : (this.indexCheck() === false)}">
+  <div class="col-lg-9 col-md-8 col-sm-7 col-xs-7">
+    <p class="book-title" @click="this.viewBookPage">
+      <span class="index">{{this.index + 1}}.</span>
+      <span class="book-title-description">{{this.book.title}}</span>
+      <span class="book-title-score">({{this.book.rating}}/10)</span>
+    </p>
+    <p class="book-author">{{this.book.author}}</p>
+    <p class="book-content">{{this.truncateText(this.book.synopsis)}}</p>
+    <ul>
+      <li v-if="this.book.upvoted === false" class="upvote">Upvote</li>
+      <li v-if="this.book.upvoted === true" class="upvoted">Upvoted</li>
+      <li class="number">Upvoted {{this.book.upvotes}} times</li>
+    </ul>
+  </div>
+  <div class="col-lg-3 col-md-4 col-sm-5 col-xs-5">
+    <div class="thumbnail" @click="this.viewBookPage">
+      <img :src="this.refractorImageSource(this.book.cover)" alt="this.book.slug" />
+    </div>
+  </div>
+</div>
